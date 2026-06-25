@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新西兰行前准备清单 🥝 | 2026.07.09</title>
+<style>
+:root {
+  --bg: #f5f5f0;
+  --card: #ffffff;
+  --text: #2d2d2d;
+  --sub: #6b6b6b;
+  --accent: #1a7a4c;
+  --accent-light: #e8f5e9;
+  --warn: #e67e22;
+  --warn-light: #fef3e7;
+  --danger: #c0392b;
+  --danger-light: #fdedec;
+  --blue: #2471a3;
+  --blue-light: #eaf2f8;
+  --border: #e0e0d8;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --radius: 10px;
+  --transition: 0.15s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.header {
+  background: linear-gradient(135deg, #1a3a2a 0%, #1a5c3a 40%, #1a7a4c 100%);
+  color: #fff;
+  padding: 28px 24px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
+.header h1 span { font-size: 1rem; font-weight: 400; opacity: 0.85; }
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.12);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+.countdown strong { font-size: 1.3rem; font-weight: 700; }
+.countdown small { opacity: 0.8; font-size: 0.8rem; }
+
+/* ── Layout ── */
+.app { max-width: 1100px; margin: 0 auto; padding: 20px 16px 40px; }
+
+/* ── Dashboard ── */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.stat-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-left: 4px solid transparent;
+}
+.stat-card.overall { border-left-color: var(--accent); }
+.stat-card.buy-cn { border-left-color: var(--warn); }
+.stat-card.ready  { border-left-color: #27ae60; }
+.stat-card.info   { border-left-color: var(--blue); }
+.stat-icon { font-size: 1.6rem; }
+.stat-num { font-size: 1.8rem; font-weight: 700; line-height: 1; }
+.stat-label { font-size: 0.8rem; color: var(--sub); margin-top: 2px; }
+.stat-bar {
+  height: 5px;
+  border-radius: 3px;
+  background: #e9ecef;
+  margin-top: 6px;
+  overflow: hidden;
+}
+.stat-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+.stat-bar-fill.green { background: #27ae60; }
+.stat-bar-fill.orange { background: var(--warn); }
+
+/* ── Filter Bar ── */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.filter-btn {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--text);
+  font-family: inherit;
+}
+.filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+.filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ── Main Content ── */
+.content-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: sticky;
+  top: 120px;
+}
+.sidebar-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--sub);
+  padding: 14px 16px 8px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+  color: var(--text);
+}
+.nav-item:hover { background: #f8f9fa; }
+.nav-item.active { background: var(--accent-light); border-left-color: var(--accent); font-weight: 600; }
+.nav-icon { font-size: 1.1rem; width: 24px; text-align: center; }
+.nav-label { flex: 1; }
+.nav-badge {
+  font-size: 0.7rem;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.nav-badge.cn { background: var(--warn-light); color: var(--warn); }
+.nav-progress {
+  width: 100%;
+  height: 3px;
+  background: #e9ecef;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.nav-progress-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.3s; }
+
+/* ── Category Section ── */
+.category {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.cat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  user-select: none;
+}
+.cat-header-left { display: flex; align-items: center; gap: 10px; }
+.cat-icon { font-size: 1.4rem; }
+.cat-title { font-size: 1.1rem; font-weight: 700; }
+.cat-meta { font-size: 0.8rem; color: var(--sub); }
+.cat-header-right { display: flex; align-items: center; gap: 10px; }
+.cat-progress-text { font-size: 0.8rem; color: var(--sub); font-weight: 600; }
+.cat-arrow { transition: transform 0.2s; font-size: 0.8rem; color: #999; }
+.cat-header.collapsed .cat-arrow { transform: rotate(-90deg); }
+.cat-body { padding: 8px 0; }
+.cat-body.hidden { display: none; }
+
+/* ── Item Row ── */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  transition: background 0.12s;
+  border-bottom: 1px solid #f5f5f0;
+}
+.item:last-child { border-bottom: none; }
+.item:hover { background: #fafaf7; }
+.item.checked .item-name { text-decoration: line-through; color: #aaa; }
+.item.checked .item-note { opacity: 0.5; }
+
+.item-checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid #cdd4da;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  background: #fff;
+}
+.item-checkbox:hover { border-color: var(--accent); }
+.item-checkbox.done { background: var(--accent); border-color: var(--accent); }
+.item-checkbox.done::after {
+  content: '✓';
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.item-content { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.item-name { font-size: 0.9rem; font-weight: 500; }
+.item-qty { font-size: 0.78rem; color: var(--sub); background: #f0f0eb; padding: 1px 7px; border-radius: 4px; white-space: nowrap; }
+.item-note { font-size: 0.75rem; color: #999; }
+
+/* ── Tags ── */
+.tag {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.tag-buy-cn { background: var(--warn-light); color: #c0681a; }
+.tag-buy-nz { background: var(--blue-light); color: #1a5a8a; }
+.tag-have   { background: #e8f5e9; color: #1a6b3a; }
+.tag-important { background: var(--danger-light); color: var(--danger); }
+.tag-optional { background: #f5f0ff; color: #6c5ce7; }
+
+/* ── Info Box ── */
+.info-box {
+  background: #fffbf0;
+  border: 1px solid #f0e4b8;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 12px 20px;
+  font-size: 0.85rem;
+}
+.info-box strong { color: var(--warn); }
+.info-box.warn { background: #fff5f5; border-color: #f5c6cb; }
+.info-box.warn strong { color: var(--danger); }
+
+/* ── Buttons ── */
+.btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; justify-content: center; }
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: var(--transition);
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: #15653e; }
+.btn-outline { background: var(--card); color: var(--accent); border: 1.5px solid var(--accent); }
+.btn-outline:hover { background: var(--accent-light); }
+.btn-danger { background: #fff; color: var(--danger); border: 1.5px solid var(--danger); }
+.btn-danger:hover { background: var(--danger-light); }
+
+/* ── Print ── */
+@media print {
+  .header, .sidebar, .filter-bar, .btn-row, .stat-bar, .cat-arrow, .item-checkbox { display: none !important; }
+  body { background: #fff; font-size: 12px; }
+  .app { padding: 0; max-width: 100%; }
+  .content-layout { display: block; }
+  .category { break-inside: avoid; margin-bottom: 8px; box-shadow: none; border: 1px solid #ddd; }
+  .cat-body.hidden { display: block !important; }
+  .item { padding: 4px 12px; }
+  .tag { border: 1px solid #ddd; }
+  .tag-buy-cn { border-color: var(--warn); }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .content-layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; display: flex; flex-wrap: wrap; gap: 4px; padding: 8px; }
+  .sidebar-title { display: none; }
+  .nav-item { padding: 8px 12px; border-left: none; border-radius: 8px; font-size: 0.8rem; }
+  .nav-item.active { border-left: none; }
+  .nav-progress, .nav-badge { display: none; }
+  .header h1 { font-size: 1.2rem; }
+  .dashboard { grid-template-columns: repeat(2, 1fr); }
+  .stat-card { padding: 12px; }
+  .stat-num { font-size: 1.4rem; }
+  .cat-title { font-size: 1rem; }
+  .item { padding: 8px 12px; gap: 6px; }
+  .item-name { font-size: 0.82rem; }
+}
+
+/* empty state for filtered sections */
+.empty-hint {
+  text-align: center;
+  padding: 24px;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="header">
+  <div class="header-inner">
+    <h1>🥝 新西兰行前准备清单 <span>| 2026年7月9日出发</span></h1>
+    <div class="countdown">
+      <div>
+        <small>距出发还有</small><br>
+        <strong id="countdown-days">--</strong> 天
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ APP ═══════════ -->
+<div class="app">
+
+<!-- Dashboard -->
+<div class="dashboard">
+  <div class="stat-card overall">
+    <div class="stat-icon">📋</div>
+    <div style="flex:1">
+      <div class="stat-num" id="stat-overall">0%</div>
+      <div class="stat-label">总准备进度</div>
+      <div class="stat-bar"><div class="stat-bar-fill green" id="bar-overall" style="width:0%"></div></div>
+    </div>
+  </div>
+  <div class="stat-card buy-cn">
+    <div class="stat-icon">🛒</div>
+    <div style="flex:1">
+      <div class="stat-num" id="stat-cn">--</div>
+      <div class="stat-label">国内待购物品</div>
+      <div class="stat-bar"><div class="stat-bar-fill orange" id="bar-cn" style="width:0%"></div></div>
+    </div>
+  </div>
+  <div class="stat-card ready">
+    <div class="stat-icon">✅</div>
+    <div style="flex:1">
+      <div class="stat-num" id="stat-ready">--</div>
+      <div class="stat-label">已准备就绪</div>
+    </div>
+  </div>
+  <div class="stat-card info">
+    <div class="stat-icon">📅</div>
+    <div style="flex:1">
+      <div class="stat-num" id="stat-remaining">--</div>
+      <div class="stat-label">距7月9日剩余天数</div>
+    </div>
+  </div>
+</div>
+
+<!-- Filter -->
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">📋 全部</button>
+  <button class="filter-btn" data-filter="unchecked">⬜ 待准备</button>
+  <button class="filter-btn" data-filter="buy-cn">🛒 需国内购买</button>
+  <button class="filter-btn" data-filter="important">⚠️ 重要项</button>
+</div>
+
+<!-- Content -->
+<div class="content-layout">
+  <nav class="sidebar" id="sidebar"></nav>
+  <main id="main-content"></main>
+</div>
+
+<!-- Buttons -->
+<div class="btn-row">
+  <button class="btn btn-primary" onclick="exportSummary()">📋 生成文字摘要</button>
+  <button class="btn btn-outline" onclick="resetAll()">🔄 全部重置</button>
+  <button class="btn btn-outline" onclick="window.print()">🖨️ 打印清单</button>
+  <button class="btn btn-danger" onclick="resetAll()">🗑️ 清除进度</button>
+</div>
+
+<div id="summary-box" style="max-width:700px;margin:16px auto;"></div>
+
+</div><!-- /app -->
+
+<script>
+// ═══════════ DATA ═══════════
+const categories = [
+{
+  id: 'docs',
+  icon: '📄',
+  title: '重要文件',
+  desc: '护照签证机票等 — 全部随身携带，不放托运',
+  items: [
+    { name: '护照', qty: '1本', tag: 'have', note: '有效期需覆盖整个停留期' },
+    { name: '签证批准信', qty: '打印2份', tag: 'have', note: '纸质版，随身' },
+    { name: '机票行程单', qty: '打印2份', tag: 'have', note: '含航班号、时间、航站楼' },
+    { name: '学校录取通知书/在读证明', qty: '打印2份', tag: 'have', note: '' },
+    { name: '学费缴费证明', qty: '1份', tag: 'have', note: '如有奖学金也带上' },
+    { name: '住宿确认文件', qty: '打印2份', tag: 'have', note: '含地址、门禁信息' },
+    { name: '保险单', qty: '1份', tag: 'have', note: '医疗保险证明' },
+    { name: '接机/交通方案', qty: '1份', tag: 'have', note: '机场到住处怎么走' },
+    { name: '国内身份证', qty: '1张', tag: 'have', note: '' },
+    { name: '驾照原件', qty: '1张', tag: 'have', important: true, note: '如需在新西兰开车' },
+    { name: '证件照', qty: '6-8张', tag: 'buy-cn', note: '各种尺寸都备一点' },
+    { name: '重要文件电子备份', qty: '手机+电脑+云盘各1份', tag: 'have', important: true, note: '扫描成PDF保存' },
+    { name: '航班住宿信息发给父母', qty: '1份', tag: 'have', important: true, note: '含紧急联系方式' },
+    { name: '黑色签字笔', qty: '2支', tag: 'have', note: '填入境卡用' },
+  ]
+},
+{
+  id: 'electronics',
+  icon: '🔌',
+  title: '电器电子',
+  desc: '转换插头最重要，务必在国内买好澳标/新西兰标准的',
+  items: [
+    { name: '新西兰/澳标转换插头', qty: '3-4个', tag: 'buy-cn', important: true, note: '⚠️ 最重要！必须是澳标/新西兰标准（八字形三孔）' },
+    { name: '多口USB充电器', qty: '1-2个', tag: 'buy-cn', note: '减少带多个充电头' },
+    { name: '插线板', qty: '1个', tag: 'buy-cn', note: '选安全合规型号，配合转换插头用' },
+    { name: '数据线', qty: '4-6根', tag: 'buy-cn', note: 'Type-C、Lightning、Micro USB各备' },
+    { name: '充电宝', qty: '1个', tag: 'have', important: true, note: '必须随身！不能托运！' },
+    { name: '手机充电器', qty: '1个', tag: 'have', note: '' },
+    { name: '电脑充电器', qty: '1个', tag: 'have', note: '' },
+    { name: '电脑扩展坞/转接头', qty: '1个', tag: 'buy-cn', note: '如MacBook需要转接' },
+    { name: 'U盘', qty: '1-2个', tag: 'buy-cn', note: '' },
+    { name: '移动硬盘/SSD', qty: '1个', tag: 'buy-cn', note: '资料备份用' },
+    { name: '鼠标', qty: '1个', tag: 'have', note: '' },
+    { name: '电脑内胆包', qty: '1个', tag: 'buy-cn', note: '如背包没有保护层' },
+    { name: '备用手机膜', qty: '2张', tag: 'buy-cn', note: '国内便宜，多带两张' },
+    { name: '耳机', qty: '1副', tag: 'have', note: '' },
+  ]
+},
+{
+  id: 'luggage',
+  icon: '🧳',
+  title: '行李配件',
+  desc: '行李箱、收纳、锁具 — 大部分国内买更划算',
+  items: [
+    { name: '28寸托运行李箱', qty: 'A箱-已有', tag: 'have', note: '家里现成的' },
+    { name: '26/28寸托运行李箱', qty: 'B箱-需购买', tag: 'buy-cn', important: true, note: '新购，放生活用品和电器' },
+    { name: '20寸登机箱', qty: '1个', tag: 'have', note: '放2天换洗衣物和备用文件' },
+    { name: '行李牌', qty: '2个', tag: 'buy-cn', note: '每个托运行李箱贴1个' },
+    { name: '行李锁', qty: '2把', tag: 'buy-cn', note: 'TSA海关锁更好' },
+    { name: '行李绑带', qty: '2条', tag: 'buy-cn', note: '加固行李箱，也方便识别' },
+    { name: '真空压缩袋', qty: '4-6个', tag: 'buy-cn', important: true, note: '衣物压缩省空间，国内买便宜' },
+    { name: '收纳袋', qty: '8-12个', tag: 'buy-cn', note: '分类整理衣物和杂物' },
+    { name: '脏衣袋', qty: '1个', tag: 'buy-cn', note: '' },
+    { name: '洗衣袋', qty: '3-5个', tag: 'buy-cn', note: '' },
+    { name: '鞋袋', qty: '3-4个', tag: 'buy-cn', note: '装鞋子用' },
+    { name: '折叠购物袋', qty: '1个', tag: 'buy-cn', note: '' },
+    { name: '密封袋', qty: '10-20个', tag: 'buy-cn', note: '各种尺寸，装液体防漏' },
+  ]
+},
+{
+  id: 'clothes',
+  icon: '👔',
+  title: '衣物鞋帽',
+  desc: '奥克兰冬天湿冷但不用太厚，叠穿为主',
+  items: [
+    { name: '内裤', qty: '10-14条', tag: 'buy-cn', note: '' },
+    { name: '普通袜子', qty: '10双', tag: 'buy-cn', note: '' },
+    { name: '厚袜子', qty: '3双', tag: 'buy-cn', note: '冬天用' },
+    { name: 'T恤/打底衫', qty: '6-8件', tag: 'have', note: '' },
+    { name: '长袖打底衫', qty: '4-6件', tag: 'have', note: '' },
+    { name: '衬衫/正式上衣', qty: '2-3件', tag: 'have', note: '面试或正式场合' },
+    { name: '卫衣', qty: '2-3件', tag: 'have', note: '' },
+    { name: '毛衣', qty: '2-3件', tag: 'have', note: '' },
+    { name: '防风防雨外套', qty: '1件', tag: 'buy-cn', important: true, note: '奥克兰多雨，必带！' },
+    { name: '厚外套', qty: '1件', tag: 'have', note: '' },
+    { name: '羽绒服', qty: '1件', tag: 'have', note: '怕冷就带，可压缩' },
+    { name: '长裤', qty: '4-6条', tag: 'have', note: '' },
+    { name: '运动裤', qty: '2条', tag: 'have', note: '' },
+    { name: '短裤', qty: '2条', tag: 'have', note: '' },
+    { name: '睡衣', qty: '2套', tag: 'have', note: '' },
+    { name: '运动服', qty: '1-2套', tag: 'have', note: '' },
+    { name: '正装/面试服', qty: '1套', tag: 'have', note: '如有面试需求' },
+    { name: '皮带', qty: '1条', tag: 'have', note: '' },
+    { name: '围巾', qty: '1条', tag: 'have', note: '' },
+    { name: '帽子', qty: '1顶', tag: 'have', note: '' },
+    { name: '手套', qty: '1副', tag: 'buy-cn', note: '怕冷则带' },
+    { name: '运动鞋', qty: '1双', tag: 'have', note: '' },
+    { name: '防水/耐脏鞋', qty: '1双', tag: 'buy-cn', important: true, note: '奥克兰多雨，实用' },
+    { name: '正式皮鞋', qty: '1双', tag: 'have', note: '正式场合用，可选' },
+    { name: '拖鞋', qty: '1双', tag: 'have', note: '' },
+  ]
+},
+{
+  id: 'bedding',
+  icon: '🛏️',
+  title: '床品浴巾',
+  desc: '压缩后不太占地方，保证到了就能睡',
+  items: [
+    { name: '床单', qty: '1-2条', tag: 'buy-cn', note: '' },
+    { name: '被套', qty: '1条', tag: 'buy-cn', note: '' },
+    { name: '枕套', qty: '2个', tag: 'buy-cn', note: '' },
+    { name: '薄毯', qty: '1条', tag: 'have', note: '' },
+    { name: '毛巾', qty: '2条', tag: 'buy-cn', note: '' },
+    { name: '浴巾', qty: '1条', tag: 'buy-cn', note: '' },
+  ]
+},
+{
+  id: 'toiletries',
+  icon: '🧴',
+  title: '洗漱日用品',
+  desc: '带初期用量即可，大瓶的到奥克兰再买',
+  items: [
+    { name: '牙刷', qty: '4-6支', tag: 'buy-cn', note: '国内便宜，多带' },
+    { name: '牙膏', qty: '2-3支', tag: 'buy-cn', note: '托运' },
+    { name: '洗面奶', qty: '1-2支', tag: 'buy-cn', note: '' },
+    { name: '洗发水+沐浴露', qty: '旅行装各1瓶', tag: 'buy-cn', note: '托运并防漏，大瓶到奥克兰买' },
+    { name: '护肤品', qty: '1套', tag: 'buy-cn', note: '托运，防漏包装' },
+    { name: '防晒霜', qty: '2支', tag: 'buy-cn', important: true, note: '⚠️ 新西兰紫外线极强！国内买便宜' },
+    { name: '润唇膏', qty: '2支', tag: 'buy-cn', note: '' },
+    { name: '护手霜', qty: '2支', tag: 'buy-cn', note: '' },
+    { name: '剃须刀/剃须用品', qty: '1套', tag: 'buy-cn', note: '如需要' },
+    { name: '洗衣皂/旅行洗衣液', qty: '1小份', tag: 'buy-cn', note: '够初期用即可' },
+    { name: '指甲剪', qty: '1个', tag: 'have', note: '托运！' },
+    { name: '梳子', qty: '1把', tag: 'have', note: '' },
+    { name: '折叠雨伞', qty: '1把', tag: 'buy-cn', important: true, note: '奥克兰多雨' },
+    { name: '折叠晾衣绳', qty: '1条', tag: 'buy-cn', note: '很实用' },
+    { name: '衣架', qty: '6-10个', tag: 'buy-cn', note: '空间不够可到奥克兰买' },
+  ]
+},
+{
+  id: 'medicine',
+  icon: '💊',
+  title: '药品清单',
+  desc: '全部保留原包装+说明书，不带含伪麻黄碱/可待因成分的药',
+  items: [
+    { name: '对乙酰氨基酚（退烧止痛）', qty: '1盒', tag: 'buy-cn', important: true, note: '保留原包装' },
+    { name: '布洛芬（退烧止痛）', qty: '1盒', tag: 'buy-cn', important: true, note: '保留原包装' },
+    { name: '电子体温计', qty: '1支', tag: 'buy-cn', note: '' },
+    { name: '咽喉含片', qty: '1-2盒', tag: 'buy-cn', note: '确认成分' },
+    { name: '蒙脱石散（止泻）', qty: '1盒', tag: 'buy-cn', important: true, note: '保留原包装' },
+    { name: '口服补液盐', qty: '1盒', tag: 'buy-cn', note: '' },
+    { name: '益生菌', qty: '1盒', tag: 'buy-cn', note: '' },
+    { name: '胃药', qty: '1盒', tag: 'buy-cn', note: '按个人情况' },
+    { name: '晕车晕船药', qty: '1盒', tag: 'buy-cn', note: '' },
+    { name: '抗过敏药（氯雷他定等）', qty: '1盒', tag: 'buy-cn', important: true, note: '' },
+    { name: '生理盐水鼻喷', qty: '1瓶', tag: 'buy-cn', note: '托运' },
+    { name: '感冒药', qty: '1盒', tag: 'buy-cn', important: true, note: '⚠️ 确认不含伪麻黄碱/可待因！' },
+    { name: '口腔溃疡贴/凝胶', qty: '1盒', tag: 'buy-cn', note: '' },
+    { name: '牙线', qty: '1盒', tag: 'buy-cn', note: '' },
+    { name: '创可贴', qty: '20-30片', tag: 'buy-cn', note: '' },
+    { name: '碘伏棉签/消毒棉片', qty: '1盒', tag: 'buy-cn', note: '' },
+    { name: '无菌纱布', qty: '5-10片', tag: 'buy-cn', note: '' },
+    { name: '医用胶带', qty: '1卷', tag: 'buy-cn', note: '' },
+    { name: '弹性绷带', qty: '1卷', tag: 'buy-cn', note: '' },
+    { name: '烫伤膏', qty: '1支', tag: 'buy-cn', note: '如常用则带' },
+    { name: '个人长期处方药', qty: '按需', tag: 'buy-cn', important: true, note: '⚠️ 带处方+医生说明+英文药名' },
+  ]
+},
+{
+  id: 'carryon',
+  icon: '🎒',
+  title: '随身背包',
+  desc: '双肩包里放的东西 — 飞机上用+入境需要',
+  items: [
+    { name: 'U形枕', qty: '1个', tag: 'buy-cn', important: true, note: '长途飞行必备' },
+    { name: '眼罩+耳塞', qty: '各1个', tag: 'buy-cn', note: '飞机上睡觉用' },
+    { name: '空水杯', qty: '1个', tag: 'have', note: '过安检后接水' },
+    { name: '薄外套', qty: '1件', tag: 'have', note: '飞机上和抵达时穿' },
+    { name: '应急内裤+袜子', qty: '各1条/双', tag: 'have', note: '防止托运行李延误' },
+    { name: '口罩', qty: '5-10只', tag: 'buy-cn', note: '' },
+    { name: '纸巾+湿巾', qty: '各1小包', tag: 'buy-cn', note: '' },
+    { name: '眼镜', qty: '1副', tag: 'have', note: '' },
+    { name: '备用眼镜', qty: '1副', tag: 'buy-cn', important: true, note: '国内验光配好，新西兰贵且慢' },
+    { name: '人民币现金', qty: '500-1000元', tag: 'have', note: '机场备用' },
+    { name: '新西兰元现金', qty: '300-500纽币', tag: 'buy-cn', important: true, note: '提前换汇，到机场也能换' },
+    { name: 'Visa/Mastercard银行卡', qty: '1-2张', tag: 'have', important: true, note: '出发前开通境外支付功能' },
+    { name: '国内银行卡', qty: '1-2张', tag: 'have', note: '' },
+    { name: '中国手机卡', qty: '1张', tag: 'have', important: true, note: '开通国际漫游，收验证码用' },
+    { name: '新西兰电话卡/eSIM', qty: '1个', tag: 'buy-cn', important: true, note: '提前买好或落地机场买' },
+  ]
+},
+{
+  id: 'stationery',
+  icon: '📚',
+  title: '学习用品',
+  desc: '够初期使用即可，不用带太多',
+  items: [
+    { name: '常用文具套装', qty: '1套', tag: 'buy-cn', note: '笔、橡皮、尺子等' },
+    { name: '笔记本', qty: '3-5本', tag: 'buy-cn', note: '' },
+    { name: '文件夹', qty: '2-3个', tag: 'buy-cn', note: '' },
+    { name: '透明文件袋', qty: '5-10个', tag: 'buy-cn', note: '' },
+    { name: '小订书机+订书钉', qty: '1套', tag: 'buy-cn', note: '' },
+    { name: '胶带', qty: '1卷', tag: 'buy-cn', note: '' },
+    { name: '剪刀', qty: '1把', tag: 'have', note: '托运！' },
+  ]
+},
+{
+  id: 'gifts',
+  icon: '🎁',
+  title: '礼物与个人物品',
+  desc: '轻便为主，不带食品和动植物制品',
+  items: [
+    { name: '轻便小礼物', qty: '3-5份', tag: 'buy-cn', note: '送室友/同学，中国风小物件' },
+    { name: '个人纪念小物', qty: '1-3件', tag: 'have', note: '控制重量' },
+    { name: '必要书籍', qty: '2-4本', tag: 'have', note: '优先电子版' },
+  ]
+},
+{
+  id: 'optional',
+  icon: '🤔',
+  title: '可选携带 / 抵达后买',
+  desc: '这些物品PDF建议不带，但你可以根据自己的情况决定',
+  items: [
+    { name: '迷你电饭煲（1-2人份）', qty: '1个', tag: 'buy-cn', note: 'PDF建议抵达后买，但很多人选择从国内带小型的。如果行李箱有空间就带，不想占地方就到奥克兰再买（约30-50纽币）' },
+    { name: '热水壶', qty: '', tag: 'buy-nz', note: '到奥克兰买，便宜且不用占行李空间' },
+    { name: '锅具/厨具', qty: '', tag: 'buy-nz', note: '到奥克兰买或住处可能有，不用带' },
+    { name: '电热毯', qty: '', tag: 'buy-nz', note: '不建议带，占地方且奥克兰没那么冷' },
+    { name: '大量调料/火锅底料', qty: '', tag: 'buy-nz', note: '奥克兰华人超市基本都有卖。如确需少量带，必须未开封+申报' },
+    { name: '大量洗衣液/纸巾', qty: '', tag: 'buy-nz', note: '超市随处可买，不用占行李重量' },
+    { name: '大量纸质书', qty: '', tag: 'buy-nz', note: '优先电子版，必要书籍控制在2-4本' },
+  ]
+},
+{
+  id: 'pre-flight',
+  icon: '✅',
+  title: '出发前一周检查',
+  desc: '7月初逐项打勾，确保万无一失',
+  items: [
+    { name: '核对护照有效期', qty: '', tag: 'have', important: true, note: '' },
+    { name: '核对签证状态', qty: '', tag: 'have', important: true, note: '' },
+    { name: '核对机票日期+航站楼+行李额度', qty: '', tag: 'have', important: true, note: '' },
+    { name: '核对学校报到日期+住宿入住日期', qty: '', tag: 'have', note: '' },
+    { name: '准备新西兰旅客申报信息', qty: '', tag: 'have', note: '网上提前填' },
+    { name: '打印所有重要文件×2份', qty: '', tag: 'have', important: true, note: '护照首页、签证、机票、录取、住宿、保险' },
+    { name: '扫描全部重要文件PDF备份', qty: '', tag: 'have', important: true, note: '手机+电脑+云盘各1份' },
+    { name: '给父母发航班住宿联系人信息', qty: '', tag: 'have', important: true, note: '航班号、起飞抵达时间、住宿地址、学校联系人' },
+    { name: '确认国内手机号可收国际短信', qty: '', tag: 'have', important: true, note: '' },
+    { name: '开通银行卡境外支付+确认限额', qty: '', tag: 'have', important: true, note: '' },
+    { name: '换新西兰元现金300-500纽币', qty: '', tag: 'buy-cn', important: true, note: '' },
+    { name: '完成体检+牙齿检查+验光配镜', qty: '', tag: 'have', note: '' },
+    { name: '核对所有药品成分+数量+包装', qty: '', tag: 'have', important: true, note: '确保不含违禁成分' },
+    { name: '清洁鞋底+行李箱轮子+户外用品', qty: '', tag: 'have', important: true, note: '刷掉泥土草籽，新西兰生物安全很严' },
+    { name: '洗好晾干所有要带的衣物床品', qty: '', tag: 'have', note: '' },
+    { name: '托运行李箱A+B初次打包+称重', qty: '', tag: 'have', important: true, note: '每个控制在20-22kg' },
+    { name: '登机箱+双肩包初次打包+称重', qty: '', tag: 'have', note: '' },
+    { name: '拍摄行李箱外观+内部物品照片', qty: '', tag: 'have', note: '万一行李延误有用' },
+    { name: '检查所有充电器+数据线+转换头能正常工作', qty: '', tag: 'have', note: '' },
+    { name: '电脑+手机+硬盘资料备份', qty: '', tag: 'have', important: true, note: '' },
+    { name: '下载离线地图+航司App+翻译App', qty: '', tag: 'have', note: '' },
+    { name: '确认住宿第一晚能进门', qty: '', tag: 'have', important: true, note: '保存门禁密码/钥匙/联系人' },
+    { name: '确认抵达当天交通方案+备用方案', qty: '', tag: 'have', note: '' },
+    { name: '和父母确认紧急联系流程', qty: '', tag: 'have', important: true, note: '' },
+  ]
+}
+];
+
+// ═══════════ STATE ═══════════
+const STORAGE_KEY = 'nz-checklist-state';
+let checkState = {};   // { 'item-index': true/false }
+let currentFilter = 'all';
+let collapsedCats = {};
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) checkState = JSON.parse(raw);
+  } catch(e) { checkState = {}; }
+  try {
+    const raw2 = localStorage.getItem(STORAGE_KEY + '-collapsed');
+    if (raw2) collapsedCats = JSON.parse(raw2);
+  } catch(e) { collapsedCats = {}; }
+}
+function saveState() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(checkState));
+  localStorage.setItem(STORAGE_KEY + '-collapsed', JSON.stringify(collapsedCats));
+}
+
+function getItemKey(catIdx, itemIdx) { return `${catIdx}-${itemIdx}`; }
+
+// ═══════════ RENDER ═══════════
+function getFlatItems() {
+  const flat = [];
+  categories.forEach((cat, ci) => {
+    cat.items.forEach((item, ii) => {
+      flat.push({ cat, ci, ii, item, key: getItemKey(ci, ii), done: !!checkState[getItemKey(ci, ii)] });
+    });
+  });
+  return flat;
+}
+
+function renderAll() {
+  renderSidebar();
+  renderContent();
+  updateStats();
+}
+
+function renderSidebar() {
+  const sb = document.getElementById('sidebar');
+  let html = '<div class="sidebar-title">分类导航</div>';
+  categories.forEach((cat, ci) => {
+    const flat = cat.items.map((item, ii) => ({ key: getItemKey(ci, ii), done: !!checkState[getItemKey(ci, ii)], item }));
+    const done = flat.filter(f => f.done).length;
+    const total = flat.length;
+    const pct = total ? Math.round(done/total*100) : 0;
+    const cnCount = cat.items.filter(i => i.tag === 'buy-cn').length;
+    html += `
+      <a class="nav-item" href="#cat-${cat.id}" onclick="scrollToCat('${cat.id}')">
+        <span class="nav-icon">${cat.icon}</span>
+        <span class="nav-label">${cat.title}</span>
+        ${cnCount ? `<span class="nav-badge cn">${cnCount}购</span>` : ''}
+        <span style="font-size:0.75rem;color:var(--sub)">${done}/${total}</span>
+      </a>`;
+  });
+  sb.innerHTML = html;
+}
+
+function renderContent() {
+  const main = document.getElementById('main-content');
+  let html = '';
+  categories.forEach((cat, ci) => {
+    const allItems = cat.items.map((item, ii) => ({
+      item, key: getItemKey(ci, ii), done: !!checkState[getItemKey(ci, ii)]
+    }));
+
+    let visibleItems = allItems;
+    if (currentFilter === 'unchecked') {
+      visibleItems = allItems.filter(f => !f.done);
+    } else if (currentFilter === 'buy-cn') {
+      visibleItems = allItems.filter(f => f.item.tag === 'buy-cn');
+    } else if (currentFilter === 'important') {
+      visibleItems = allItems.filter(f => f.item.important);
+    }
+
+    const doneCount = allItems.filter(f => f.done).length;
+    const total = allItems.length;
+    const pct = total ? Math.round(doneCount/total*100) : 0;
+    const collapsed = !!collapsedCats[cat.id];
+
+    html += `
+    <section class="category" id="cat-${cat.id}">
+      <div class="cat-header${collapsed ? ' collapsed' : ''}" onclick="toggleCat('${cat.id}')">
+        <div class="cat-header-left">
+          <span class="cat-icon">${cat.icon}</span>
+          <div>
+            <div class="cat-title">${cat.title}</div>
+            <div class="cat-meta">${cat.desc}</div>
+          </div>
+        </div>
+        <div class="cat-header-right">
+          <div class="cat-progress-text">${doneCount}/${total} · ${pct}%</div>
+          <span class="cat-arrow">▼</span>
+        </div>
+      </div>
+      <div class="cat-body${collapsed ? ' hidden' : ''}">
+        ${cat.id === 'medicine' ? `
+        <div class="info-box warn">
+          <strong>⚠️ 药品入境重要提醒：</strong>所有药品必须保留<strong>原包装+说明书</strong>，不拆散不带无标签药片。
+          不带含<strong>伪麻黄碱、麻黄碱、可待因</strong>成分的药（重点检查感冒药、止咳药、鼻炎药）。
+          处方药带<strong>医生处方和英文说明</strong>。入境时主动申报个人自用。
+        </div>` : ''}
+        ${cat.id === 'electronics' ? `
+        <div class="info-box">
+          <strong>💡 提示：</strong>新西兰使用澳标插座（八字形三孔），电压230V。国内两脚插头可以直接用转换插头转接。
+          转换插头一定要在国内买好，新西兰买又贵又难找。推荐买<strong>公牛等品牌的澳标转换插头</strong>。
+        </div>` : ''}
+        ${cat.id === 'pre-flight' ? `
+        <div class="info-box warn">
+          <strong>⚠️ 新西兰生物安全非常严格！</strong>出发前务必清洁所有鞋底、行李箱轮子，刷掉泥土、草籽、砂石。
+          不带食品（肉、蛋、奶、水果、种子、蜂蜜）。不确定就申报，宁愿多申报不要漏报。
+          充电宝、锂电池必须随身，不放托运！
+        </div>` : ''}
+        ${visibleItems.length === 0 ? '<div class="empty-hint">✅ 此分类已全部完成或没有匹配项</div>' : ''}
+        ${visibleItems.map(f => renderItem(f.item, f.key, f.done, ci)).join('')}
+      </div>
+    </section>`;
+  });
+  main.innerHTML = html;
+}
+
+function renderItem(item, key, done) {
+  const tagMap = {
+    'buy-cn': '<span class="tag tag-buy-cn">🛒 国内购买</span>',
+    'buy-nz': '<span class="tag tag-buy-nz">🇳🇿 新西兰买</span>',
+    'have': '<span class="tag tag-have">✅ 已有</span>',
+  };
+  const tagHtml = tagMap[item.tag] || '';
+  const importantHtml = item.important ? '<span class="tag tag-important">⚠️ 重要</span>' : '';
+  const noteHtml = item.note ? `<span class="item-note">${item.note}</span>` : '';
+
+  return `
+    <div class="item${done ? ' checked' : ''}" data-key="${key}">
+      <div class="item-checkbox${done ? ' done' : ''}" onclick="toggleItem('${key}')"></div>
+      <div class="item-content">
+        <span class="item-name">${item.name}</span>
+        ${item.qty ? `<span class="item-qty">${item.qty}</span>` : ''}
+        ${importantHtml}
+        ${tagHtml}
+        ${noteHtml}
+      </div>
+    </div>`;
+}
+
+function toggleItem(key) {
+  checkState[key] = !checkState[key];
+  saveState();
+  renderAll();
+}
+
+function toggleCat(catId) {
+  collapsedCats[catId] = !collapsedCats[catId];
+  saveState();
+  // Just toggle the body visibility directly to avoid full re-render
+  const cat = document.getElementById('cat-' + catId);
+  if (cat) {
+    const header = cat.querySelector('.cat-header');
+    const body = cat.querySelector('.cat-body');
+    if (collapsedCats[catId]) {
+      header.classList.add('collapsed');
+      body.classList.add('hidden');
+    } else {
+      header.classList.remove('collapsed');
+      body.classList.remove('hidden');
+    }
+  }
+}
+
+function scrollToCat(catId) {
+  const el = document.getElementById('cat-' + catId);
+  if (el) {
+    if (collapsedCats[catId]) {
+      collapsedCats[catId] = false;
+      saveState();
+      renderAll();
+    }
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function updateStats() {
+  const flat = getFlatItems();
+  const total = flat.length;
+  const done = flat.filter(f => f.done).length;
+  const pct = total ? Math.round(done/total*100) : 0;
+
+  const cnItems = flat.filter(f => f.item.tag === 'buy-cn');
+  const cnDone = cnItems.filter(f => f.done).length;
+  const cnTotal = cnItems.length;
+  const cnPct = cnTotal ? Math.round(cnDone/cnTotal*100) : 0;
+
+  document.getElementById('stat-overall').textContent = pct + '%';
+  document.getElementById('stat-cn').textContent = (cnTotal - cnDone) + ' 项';
+  document.getElementById('stat-ready').textContent = done + ' 项';
+  document.getElementById('bar-overall').style.width = pct + '%';
+  document.getElementById('bar-cn').style.width = cnPct + '%';
+
+  // Countdown
+  const now = new Date();
+  const target = new Date('2026-07-09T00:00:00+08:00');
+  const diff = Math.ceil((target - now) / (1000*60*60*24));
+  document.getElementById('countdown-days').textContent = Math.max(0, diff);
+  document.getElementById('stat-remaining').textContent = Math.max(0, diff) + ' 天';
+}
+
+// ═══════════ FILTER ═══════════
+document.querySelector('.filter-bar').addEventListener('click', (e) => {
+  if (e.target.classList.contains('filter-btn')) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    currentFilter = e.target.dataset.filter;
+    renderContent();
+  }
+});
+
+// ═══════════ ACTIONS ═══════════
+function resetAll() {
+  if (confirm('确定要清除所有勾选进度吗？此操作不可恢复。')) {
+    checkState = {};
+    collapsedCats = {};
+    saveState();
+    renderAll();
+  }
+}
+
+function exportSummary() {
+  const flat = getFlatItems();
+  const unchecked = flat.filter(f => !f.done);
+  const uncheckedCN = unchecked.filter(f => f.item.tag === 'buy-cn');
+  const uncheckedImportant = unchecked.filter(f => f.item.important);
+
+  let text = '══════════════════════════\n';
+  text += '🥝 新西兰行前准备 - 待办摘要\n';
+  text += '生成时间：' + new Date().toLocaleString('zh-CN') + '\n';
+  text += '══════════════════════════\n\n';
+
+  text += `📊 总进度：${Math.round(flat.filter(f=>f.done).length/flat.length*100)}%（${flat.filter(f=>f.done).length}/${flat.length}）\n`;
+  text += `🛒 国内待购：${uncheckedCN.length} 项\n`;
+  text += `⚠️ 重要待办：${uncheckedImportant.length} 项\n\n`;
+
+  text += '── 🛒 国内还需购买 ──\n';
+  if (uncheckedCN.length === 0) {
+    text += '  ✅ 全部买齐了！\n';
+  } else {
+    uncheckedCN.forEach(f => {
+      text += `  ☐ ${f.item.name}${f.item.qty ? ' ×'+f.item.qty : ''}${f.item.important ? ' ⚠️' : ''}\n`;
+      if (f.item.note) text += `    └ ${f.item.note}\n`;
+    });
+  }
+
+  text += '\n── ⚠️ 重要项待办 ──\n';
+  if (uncheckedImportant.length === 0) {
+    text += '  ✅ 全部完成了！\n';
+  } else {
+    uncheckedImportant.forEach(f => {
+      text += `  ☐ [${f.cat.title}] ${f.item.name}\n`;
+    });
+  }
+
+  text += '\n── 📋 全部待办 ──\n';
+  const byCat = {};
+  unchecked.forEach(f => {
+    if (!byCat[f.cat.title]) byCat[f.cat.title] = [];
+    byCat[f.cat.title].push(f);
+  });
+  for (const [cat, items] of Object.entries(byCat)) {
+    text += `\n  【${cat}】${items.length}项\n`;
+    items.forEach(f => {
+      text += `    ☐ ${f.item.name}${f.item.qty ? ' ×'+f.item.qty : ''} [${f.item.tag === 'buy-cn' ? '国内买' : f.item.tag === 'buy-nz' ? '新西兰买' : '已有'}]\n`;
+    });
+  }
+
+  const box = document.getElementById('summary-box');
+  box.innerHTML = `<div class="category"><div class="cat-header" onclick="this.nextElementSibling.classList.toggle('hidden')">
+    <div class="cat-header-left"><span>📋</span><div><div class="cat-title">文字摘要</div><div class="cat-meta">点击展开/收起 · 可复制粘贴发给父母</div></div></div>
+    <span class="cat-arrow">▼</span></div>
+    <pre class="cat-body" style="padding:16px;font-size:0.8rem;line-height:1.6;white-space:pre-wrap;font-family:inherit;background:#fafaf7;margin:0;">${text}</pre></div>`;
+  box.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ═══════════ INIT ═══════════
+loadState();
+renderAll();
+
+// Update countdown every hour
+setInterval(updateStats, 3600000);
+</script>
+</body>
+</html>
