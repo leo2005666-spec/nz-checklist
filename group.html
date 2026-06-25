@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新西兰行前 · 群共享清单 🥝</title>
+<style>
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text: #2d2d2d;
+  --sub: #777;
+  --border: #e8e8e8;
+  --radius: 10px;
+  --accent: #1a7a4c;
+  --accent-light: #eaf7f0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 16px;
+}
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
+.header h1 { font-size: 1.4rem; }
+.header p { color: var(--sub); font-size: 0.85rem; margin-top: 4px; }
+.container { max-width: 700px; margin: 0 auto; }
+
+/* Section */
+.section {
+  background: var(--card);
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.section-header {
+  padding: 14px 18px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-light);
+  border-bottom: 1px solid #d4e8db;
+}
+.section-header .emoji { font-size: 1.2rem; }
+.section-header .name { color: var(--accent); }
+.section-header .badge {
+  margin-left: auto;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 2px 10px;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--accent);
+}
+.section.liu .section-header { background: #eaf7f0; border-color: #c8e6d4; }
+.section.song .section-header { background: #eef2ff; border-color: #d0d6f5; }
+.section.shen .section-header { background: #fff7ed; border-color: #fde0c8; }
+.section.everyone .section-header { background: #f5f5f5; border-color: #ddd; }
+.section.discuss .section-header { background: #fefce8; border-color: #fef08a; }
+.section.remind .section-header { background: #fef2f2; border-color: #fecaca; }
+
+/* Table */
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px 14px; text-align: left; font-size: 0.85rem; }
+th { font-size: 0.75rem; color: var(--sub); font-weight: 500; border-bottom: 1px solid var(--border); background: #fafafa; }
+td { border-bottom: 1px solid #f5f5f5; }
+tr:last-child td { border-bottom: none; }
+.col-item { width: 55%; }
+.col-qty { width: 15%; color: var(--sub); font-size: 0.8rem; }
+.col-status { width: 30%; text-align: center; }
+
+/* Status badges */
+.status {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.status.buy  { background: #fef3e7; color: #c0681a; }
+.status.ok   { background: #e8f5e9; color: #1a6b3a; }
+.status.wait { background: #f5f5f5; color: #888; }
+.status.warn { background: #fef2f2; color: #dc2626; }
+
+.empty-row td { padding: 6px 14px; color: #ccc; font-size: 0.75rem; text-align: center; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 16px;
+  color: #aaa;
+  font-size: 0.75rem;
+}
+.footer a { color: var(--accent); }
+
+/* Print */
+@media print {
+  body { background: #fff; padding: 0; font-size: 11px; }
+  .section { box-shadow: none; break-inside: avoid; border: 1px solid #ddd; }
+  .status { border: 1px solid #999; }
+}
+
+/* Add row button */
+.add-row {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1.5px dashed #ddd;
+  border-radius: 6px;
+  background: transparent;
+  color: #aaa;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin: 8px 0;
+  font-family: inherit;
+}
+.add-row:hover { border-color: var(--accent); color: var(--accent); }
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>🥝 新西兰行前 · 群共享清单</h1>
+  <p>刘翼鸣 · 宋昊轩 · 沈舟 | 2026年7月9日出发</p>
+</div>
+
+<!-- ═══════ 刘翼鸣 ═══════ -->
+<div class="section liu">
+  <div class="section-header">
+    <span class="emoji">🧑‍💻</span>
+    <span class="name">刘翼鸣</span>负责带这些 — 大家共用
+    <span class="badge">共用物品</span>
+  </div>
+  <table>
+    <thead><tr><th class="col-item">物品</th><th class="col-qty">数量</th><th class="col-status">状态</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>新西兰/澳标转换插头</td><td class="col-qty">3-4个</td><td><span class="status buy">待购买</span></td><td>公牛等品牌 澳标八字形三孔</td></tr>
+      <tr><td>插线板</td><td class="col-qty">1个</td><td><span class="status buy">待购买</span></td><td>安全合规型号 配合转换插头用</td></tr>
+      <tr><td>多口USB充电器</td><td class="col-qty">1-2个</td><td><span class="status buy">待购买</span></td><td>减少带多个充电头</td></tr>
+      <tr><td>数据线</td><td class="col-qty">4-6根</td><td><span class="status buy">待购买</span></td><td>Type-C / Lightning / Micro USB 各备</td></tr>
+      <tr><td>退烧止痛药(对乙酰氨基酚/布洛芬)</td><td class="col-qty">各1盒</td><td><span class="status buy">待购买</span></td><td>保留原包装</td></tr>
+      <tr><td>蒙脱石散(止泻)</td><td class="col-qty">1盒</td><td><span class="status buy">待购买</span></td><td>保留原包装</td></tr>
+      <tr><td>抗过敏药(氯雷他定等)</td><td class="col-qty">1盒</td><td><span class="status buy">待购买</span></td><td></td></tr>
+      <tr><td>感冒药</td><td class="col-qty">1盒</td><td><span class="status buy">待购买</span></td><td>确认不含伪麻黄碱/可待因成分</td></tr>
+      <tr><td>创可贴+碘伏棉签+无菌纱布+医用胶带</td><td class="col-qty">各1份</td><td><span class="status buy">待购买</span></td><td>外伤护理套装</td></tr>
+      <tr><td>电子体温计</td><td class="col-qty">1支</td><td><span class="status buy">待购买</span></td><td></td></tr>
+      <tr><td>晕车晕船药</td><td class="col-qty">1盒</td><td><span class="status buy">待购买</span></td><td></td></tr>
+      <tr><td>益生菌</td><td class="col-qty">1盒</td><td><span class="status buy">待购买</span></td><td></td></tr>
+      <tr><td>密封袋</td><td class="col-qty">10-20个</td><td><span class="status buy">待购买</span></td><td>各种尺寸 装液体防漏</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════ 宋昊轩 ═══════ -->
+<div class="section song">
+  <div class="section-header">
+    <span class="emoji">🙋</span>
+    <span class="name">宋昊轩</span>负责带这些 — 大家共用
+    <span class="badge">共用物品</span>
+  </div>
+  <table>
+    <thead><tr><th class="col-item">物品</th><th class="col-qty">数量</th><th class="col-status">状态</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr class="empty-row"><td colspan="4">宋昊轩你来填～想到什么写什么</td></tr>
+      <tr class="empty-row"><td colspan="4"></td></tr>
+      <tr class="empty-row"><td colspan="4"></td></tr>
+      <tr class="empty-row"><td colspan="4"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════ 沈舟 ═══════ -->
+<div class="section shen">
+  <div class="section-header">
+    <span class="emoji">🙋</span>
+    <span class="name">沈舟</span>负责带这些 — 大家共用
+    <span class="badge">共用物品</span>
+  </div>
+  <table>
+    <thead><tr><th class="col-item">物品</th><th class="col-qty">数量</th><th class="col-status">状态</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr class="empty-row"><td colspan="4">沈舟你来填～想到什么写什么</td></tr>
+      <tr class="empty-row"><td colspan="4"></td></tr>
+      <tr class="empty-row"><td colspan="4"></td></tr>
+      <tr class="empty-row"><td colspan="4"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════ 各自准备 ═══════ -->
+<div class="section everyone">
+  <div class="section-header">
+    <span class="emoji">👤</span>
+    每人自己准备自己的
+    <span class="badge">个人物品</span>
+  </div>
+  <table>
+    <thead><tr><th class="col-item">物品</th><th class="col-qty">数量</th><th class="col-status">状态</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>护照</td><td class="col-qty">1本</td><td><span class="status ok">已确认</span></td><td>有效期覆盖整个停留期</td></tr>
+      <tr><td>签证批准信(打印)</td><td class="col-qty">2份</td><td><span class="status wait">待打印</span></td><td>纸质版随身</td></tr>
+      <tr><td>机票行程单(打印)</td><td class="col-qty">2份</td><td><span class="status wait">待打印</span></td><td></td></tr>
+      <tr><td>录取通知书/在读证明(打印)</td><td class="col-qty">2份</td><td><span class="status wait">待打印</span></td><td></td></tr>
+      <tr><td>住宿确认文件(打印)</td><td class="col-qty">2份</td><td><span class="status wait">待打印</span></td><td>含地址和门禁</td></tr>
+      <tr><td>保险单(打印)</td><td class="col-qty">1份</td><td><span class="status wait">待打印</span></td><td></td></tr>
+      <tr><td>证件照</td><td class="col-qty">6-8张</td><td><span class="status buy">待购买</span></td><td>各种尺寸都备</td></tr>
+      <tr><td>重要文件电子备份(手机+电脑+云盘)</td><td class="col-qty">1套</td><td><span class="status wait">待完成</span></td><td>扫描成PDF</td></tr>
+      <tr><td>航班住宿紧急联系信息发给父母</td><td class="col-qty">1份</td><td><span class="status wait">待完成</span></td><td></td></tr>
+      <tr><td>黑色签字笔</td><td class="col-qty">2支</td><td><span class="status ok">已有</span></td><td>填入境卡用</td></tr>
+      <tr><td>充电宝</td><td class="col-qty">1个</td><td><span class="status ok">已有</span></td><td>必须随身不能托运</td></tr>
+      <tr><td>手机充电器+电脑充电器</td><td class="col-qty">各1个</td><td><span class="status ok">已有</span></td><td></td></tr>
+      <tr><td>耳机</td><td class="col-qty">1副</td><td><span class="status ok">已有</span></td><td></td></tr>
+      <tr><td>转换插头(自用)</td><td class="col-qty">1-2个</td><td><span class="status buy">待购买</span></td><td>自己房间用</td></tr>
+      <tr><td>备用手机膜</td><td class="col-qty">2张</td><td><span class="status buy">待购买</span></td><td></td></tr>
+      <tr><td>U形枕</td><td class="col-qty">1个</td><td><span class="status buy">待购买</span></td><td>长途飞行</td></tr>
+      <tr><td>眼罩+耳塞</td><td class="col-qty">各1个</td><td><span class="status buy">待购买</span></td><td></td></tr>
+      <tr><td>备用眼镜</td><td class="col-qty">1副</td><td><span class="status buy">待购买</span></td><td>国内验光配好 新西兰贵</td></tr>
+      <tr><td>防风防雨外套</td><td class="col-qty">1件</td><td><span class="status buy">待购买</span></td><td>奥克兰多雨</td></tr>
+      <tr><td>防水/耐脏鞋</td><td class="col-qty">1双</td><td><span class="status buy">待购买</span></td><td>奥克兰多雨</td></tr>
+      <tr><td>内裤</td><td class="col-qty">10-14条</td><td><span class="status buy">待购买</span></td><td></td></tr>
+      <tr><td>普通袜子 / 厚袜子</td><td class="col-qty">10双 / 3双</td><td><span class="status buy">待购买</span></td><td></td></tr>
+      <tr><td>手套</td><td class="col-qty">1副</td><td><span class="status buy">待购买</span></td><td>怕冷就带</td></tr>
+      <tr><td>床单+被套+枕套</td><td class="col-qty">1套</td><td><span class="status buy">待购买</span></td><td></td></tr>
+      <tr><td>毛巾+浴巾</td><td class="col-qty">2条+1条</td><td><span class="status buy">待购买</span></td><td></td></tr>
+      <tr><td>牙刷+牙膏</td><td class="col-qty">4-6支+2-3支</td><td><span class="status buy">待购买</span></td><td>托运</td></tr>
+      <tr><td>洗发水+沐浴露(旅行装)</td><td class="col-qty">各1瓶</td><td><span class="status buy">待购买</span></td><td>托运防漏 大瓶到奥克兰买</td></tr>
+      <tr><td>防晒霜</td><td class="col-qty">2支</td><td><span class="status buy">待购买</span></td><td>新西兰紫外线极强</td></tr>
+      <tr><td>折叠雨伞</td><td class="col-qty">1把</td><td><span class="status buy">待购买</span></td><td>奥克兰多雨</td></tr>
+      <tr><td>折叠晾衣绳</td><td class="col-qty">1条</td><td><span class="status buy">待购买</span></td><td>很实用</td></tr>
+      <tr><td>新西兰元现金</td><td class="col-qty">300-500纽币</td><td><span class="status buy">待换汇</span></td><td></td></tr>
+      <tr><td>新西兰电话卡/eSIM</td><td class="col-qty">1张</td><td><span class="status buy">待购买</span></td><td>提前买或落地机场买</td></tr>
+      <tr><td>Visa/Mastercard银行卡开通境外支付</td><td class="col-qty"></td><td><span class="status wait">待确认</span></td><td>确认限额和手续费</td></tr>
+      <tr><td>中国手机卡开通国际漫游</td><td class="col-qty"></td><td><span class="status wait">待确认</span></td><td>收验证码用</td></tr>
+      <tr><td>文具套装+笔记本+文件夹</td><td class="col-qty">1套</td><td><span class="status buy">待购买</span></td><td>够初期用</td></tr>
+      <tr><td>轻便小礼物</td><td class="col-qty">3-5份</td><td><span class="status buy">待购买</span></td><td>送室友同学 中国风小物件</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════ 待商量 ═══════ -->
+<div class="section discuss">
+  <div class="section-header">
+    <span class="emoji">🤔</span>
+    待商量 — 要不要带、谁带
+  </div>
+  <table>
+    <thead><tr><th class="col-item">物品</th><th class="col-qty">数量</th><th class="col-status">状态</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>迷你电饭煲</td><td class="col-qty">1个</td><td><span class="status wait">待讨论</span></td><td>每人各带还是合买一个大的</td></tr>
+      <tr><td>真空压缩袋</td><td class="col-qty">4-6个</td><td><span class="status wait">待讨论</span></td><td>谁有谁带 压缩衣服用</td></tr>
+      <tr><td>行李秤</td><td class="col-qty">1个</td><td><span class="status wait">待讨论</span></td><td>称重用 防止超重</td></tr>
+      <tr><td>折叠购物袋</td><td class="col-qty">1-2个</td><td><span class="status wait">待讨论</span></td><td>超市买东西用</td></tr>
+      <tr><td>口腔溃疡贴/牙线/肠胃药</td><td class="col-qty">各1份</td><td><span class="status wait">待讨论</span></td><td>看谁有常用药带上</td></tr>
+      <tr><td>衣架</td><td class="col-qty">若干</td><td><span class="status wait">待讨论</span></td><td>带几个还是到奥克兰买</td></tr>
+      <tr><td>洗衣袋/脏衣袋</td><td class="col-qty">若干</td><td><span class="status wait">待讨论</span></td><td></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════ 出发前提醒 ═══════ -->
+<div class="section remind">
+  <div class="section-header">
+    <span class="emoji">⚠️</span>
+    出发前一周 · 大家互相提醒
+  </div>
+  <table>
+    <thead><tr><th class="col-item">事项</th><th class="col-qty"></th><th class="col-status">状态</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>核对护照有效期+签证状态</td><td></td><td><span class="status wait">待完成</span></td><td>7月初做</td></tr>
+      <tr><td>核对机票日期航站楼行李额度</td><td></td><td><span class="status wait">待完成</span></td><td></td></tr>
+      <tr><td>打印所有重要文件×2份</td><td></td><td><span class="status wait">待完成</span></td><td></td></tr>
+      <tr><td>扫描全部文件PDF备份（手机+电脑+云盘）</td><td></td><td><span class="status wait">待完成</span></td><td></td></tr>
+      <tr><td>确认国内手机号能收国际短信</td><td></td><td><span class="status wait">待完成</span></td><td></td></tr>
+      <tr><td>开通银行卡境外支付+确认限额手续费</td><td></td><td><span class="status wait">待完成</span></td><td></td></tr>
+      <tr><td>换新西兰元现金300-500纽币</td><td></td><td><span class="status wait">待完成</span></td><td></td></tr>
+      <tr><td>清洁鞋底+行李箱轮子 刷掉泥土草籽</td><td></td><td><span class="status wait">待完成</span></td><td>新西兰生物安全很严</td></tr>
+      <tr><td>托运行李箱称重（控制在20-22kg）</td><td></td><td><span class="status wait">待完成</span></td><td></td></tr>
+      <tr><td>检查充电器数据线转换头能正常工作</td><td></td><td><span class="status wait">待完成</span></td><td></td></tr>
+      <tr><td>下载离线地图+航司App+翻译App</td><td></td><td><span class="status wait">待完成</span></td><td></td></tr>
+      <tr><td>确认住宿第一晚能进门（门禁密码/钥匙）</td><td></td><td><span class="status wait">待完成</span></td><td></td></tr>
+      <tr><td>和父母确认紧急联系流程</td><td></td><td><span class="status wait">待完成</span></td><td></td></tr>
+      <tr><td>拍行李箱外观+内部物品照片</td><td></td><td><span class="status wait">待完成</span></td><td>万一行李延误有用</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="footer">
+  🥝 群共享清单 · 谁想到什么就加进去<br>
+  <a href="index.html">← 返回个人清单</a>
+</div>
+
+</div>
+</body>
+</html>
